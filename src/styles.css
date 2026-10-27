@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "@fontsource/vazirmatn/400.css";
+@import "@fontsource/vazirmatn/500.css";
+@import "@fontsource/vazirmatn/600.css";
+@import "@fontsource/vazirmatn/700.css";
+
+@theme {
+  --color-canvas: #101418;
+  --color-surface: #181e24;
+  --color-surface-2: #212932;
+  --color-raised: #212932;
+  --color-fg: #e7eef3;
+  --color-muted: #8d9aa6;
+  --color-line: #2c3842;
+  --color-ink: #1a1408;
+  --color-accent: #e0a84a;
+  --color-buy: #2faf7a;
+  --color-sell: #e15d66;
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+}
